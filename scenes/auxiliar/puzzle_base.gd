@@ -1,0 +1,23 @@
+extends Node2D
+class_name PuzzleBase
+
+@onready var phantom_camera_2d: PhantomCamera2D = $PhantomCamera2D
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_enter_area_body_entered(body: Node2D) -> void:
+	if Player:
+		phantom_camera_2d.priority=15
+
+
+func _on_enter_area_body_exited(body: Node2D) -> void:
+	if Player:
+		phantom_camera_2d.priority=0
