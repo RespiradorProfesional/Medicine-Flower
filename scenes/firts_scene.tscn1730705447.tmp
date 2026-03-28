@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="3_okyw3"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_836nq"]
 [ext_resource type="PackedScene" uid="uid://dobtsoumfofdx" path="res://scenes/movibles/box.tscn" id="5_836nq"]
+[ext_resource type="PackedScene" uid="uid://6hgxtxv8uhrt" path="res://scenes/movibles/box_with_fisics.tscn" id="6_b4jlk"]
 
 [sub_resource type="Resource" id="Resource_b4jlk"]
 script = ExtResource("4_836nq")
@@ -41,4 +42,7 @@ position = Vector2(-852.5, 259)
 shape = SubResource("RectangleShape2D_okyw3")
 
 [node name="Node2D" parent="." unique_id=924909751 instance=ExtResource("5_836nq")]
-position = Vector2(-517, 70)
+position = Vector2(-1279, 9)
+
+[node name="Node2D2" parent="." unique_id=1445110580 instance=ExtResource("6_b4jlk")]
+position = Vector2(-384, 121)

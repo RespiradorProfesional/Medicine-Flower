@@ -2,6 +2,7 @@ extends Node2D
 class_name PuzzleBase
 
 @onready var phantom_camera_2d: PhantomCamera2D = $PhantomCamera2D
+@onready var colision_invisible_wall: CollisionShape2D = $inivisble_wall/colision_invisible_wall
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,3 +22,6 @@ func _on_enter_area_body_entered(body: Node2D) -> void:
 func _on_enter_area_body_exited(body: Node2D) -> void:
 	if Player:
 		phantom_camera_2d.priority=0
+
+func finished_puzzle() ->void:
+	colision_invisible_wall.disabled=true

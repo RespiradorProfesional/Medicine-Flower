@@ -13,13 +13,16 @@ size = Vector2(21, 261)
 [sub_resource type="Resource" id="Resource_2pmnd"]
 script = ExtResource("3_5qkju")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qcxax"]
+size = Vector2(91, 375)
+
 [node name="Node2D" type="Node2D" unique_id=976242000]
 script = ExtResource("1_6lo13")
 
 [node name="enter_area" type="Area2D" parent="." unique_id=1968024307]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enter_area" unique_id=1538181576]
-position = Vector2(0, 127.5)
+position = Vector2(-283.5, 127.5)
 shape = SubResource("RectangleShape2D_6lo13")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="enter_area" unique_id=1238948138]
@@ -29,7 +32,7 @@ shape = SubResource("RectangleShape2D_6lo13")
 [node name="exit_area" type="Area2D" parent="." unique_id=333908131]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="exit_area" unique_id=629791033]
-position = Vector2(-144.5, 120.5)
+position = Vector2(-428, 120.5)
 shape = SubResource("RectangleShape2D_v14pl")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="exit_area" unique_id=359658936]
@@ -41,6 +44,12 @@ position = Vector2(314, 82)
 script = ExtResource("2_qcxax")
 tween_resource = SubResource("Resource_2pmnd")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
+[node name="inivisble_wall" type="StaticBody2D" parent="." unique_id=389941479]
+
+[node name="colision_invisible_wall" type="CollisionShape2D" parent="inivisble_wall" unique_id=1537056044]
+position = Vector2(-360.5, 76.5)
+shape = SubResource("RectangleShape2D_qcxax")
 
 [connection signal="body_entered" from="enter_area" to="." method="_on_enter_area_body_entered"]
 [connection signal="body_exited" from="enter_area" to="." method="_on_enter_area_body_exited"]
