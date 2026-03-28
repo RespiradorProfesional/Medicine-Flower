@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://inlacxiqbo1j"]
+
+[ext_resource type="PackedScene" uid="uid://dobtsoumfofdx" path="res://scenes/movibles/box.tscn" id="1_t8ynu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t8ynu"]
+size = Vector2(52, 44)
+
+[node name="Node2D" unique_id=924909751 instance=ExtResource("1_t8ynu")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1499693980]
+position = Vector2(0, 0.99999976)
+scale = Vector2(0.4453125, 0.390625)
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=868555179]
+position = Vector2(0, 0)
+shape = SubResource("RectangleShape2D_t8ynu")

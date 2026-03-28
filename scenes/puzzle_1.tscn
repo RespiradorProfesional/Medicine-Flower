@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://bmyoponnbai1r"]
+
+[ext_resource type="PackedScene" uid="uid://bqgigwepdgero" path="res://scenes/auxiliar/puzzle_base.tscn" id="1_detih"]
+[ext_resource type="Script" uid="uid://dl0iachbu3x0o" path="res://scenes/puzzle_1.gd" id="2_fv3lq"]
+[ext_resource type="PackedScene" uid="uid://dpmmc2qm1tggy" path="res://scenes/clon/oveja_blanca.tscn" id="3_pje61"]
+[ext_resource type="PackedScene" uid="uid://bbb10nj2r6t2r" path="res://scenes/clon/oveja_negra.tscn" id="4_i31d8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fv3lq"]
+size = Vector2(366, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pje61"]
+size = Vector2(18, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i31d8"]
+size = Vector2(11, 1382)
+
+[node name="Node2D" unique_id=976242000 instance=ExtResource("1_detih")]
+script = ExtResource("2_fv3lq")
+ovejas_total = 3
+dialogue_resource = null
+dialogue_resource_2 = null
+
+[node name="colision_invisible_wall" parent="inivisble_wall" parent_id_path=PackedInt32Array(389941479) index="0" unique_id=1537056044]
+position = Vector2(-360, 77)
+
+[node name="Area2D" type="Area2D" parent="." index="4" unique_id=144177599]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0" unique_id=349277698]
+position = Vector2(203, 237)
+shape = SubResource("RectangleShape2D_fv3lq")
+
+[node name="limitaciones_oveja" type="StaticBody2D" parent="." index="5" unique_id=1858728880]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="limitaciones_oveja" index="0" unique_id=1012149304]
+position = Vector2(1, 232.5)
+shape = SubResource("RectangleShape2D_pje61")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="limitaciones_oveja" index="1" unique_id=1076689339]
+position = Vector2(403, 233)
+shape = SubResource("RectangleShape2D_pje61")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="limitaciones_oveja" index="2" unique_id=335171104]
+position = Vector2(-307, -425)
+shape = SubResource("RectangleShape2D_i31d8")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="limitaciones_oveja" index="3" unique_id=416835176]
+position = Vector2(571, -425)
+shape = SubResource("RectangleShape2D_i31d8")
+
+[node name="npc_camera" parent="." index="6" unique_id=1992170305]
+position = Vector2(-244, 211)
+zoom = Vector2(2, 2)
+
+[node name="player_camera" parent="." index="7" unique_id=544268338]
+position = Vector2(554, 210)
+zoom = Vector2(2, 2)
+
+[node name="Node2D" parent="." index="8" unique_id=924909751 instance=ExtResource("3_pje61")]
+position = Vector2(-219, 236)
+
+[node name="Node2D2" parent="." index="9" unique_id=2145606427 instance=ExtResource("3_pje61")]
+position = Vector2(-163, 236)
+
+[node name="Node2D3" parent="." index="10" unique_id=835861498 instance=ExtResource("4_i31d8")]
+position = Vector2(-78, 231)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

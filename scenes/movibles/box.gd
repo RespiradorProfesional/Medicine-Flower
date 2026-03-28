@@ -1,5 +1,6 @@
 # Objeto_Agarrar.gd
 extends RigidBody2D
+class_name ObjetoAgarrar
 
 var agarrado := false
 var agarre_offset := Vector2.ZERO
@@ -8,6 +9,9 @@ var agarre_offset := Vector2.ZERO
 @export var fuerza_agarre: float = 2000.0
 @export var amortiguacion: float = 10.0
 @export var limite_velocidad: float = 5000.0
+
+func _ready():
+	pass
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -21,9 +25,9 @@ func _intentar_agarrar() -> void:
 	
 	# Verificar si el click está dentro del objeto
 	if _punto_dentro(click_global):
+		
 		agarrado = true
 		agarre_offset = click_global - global_position
-		
 		# Desactivar gravedad mientras se agarra
 		gravity_scale = 0.0
 		
@@ -68,3 +72,7 @@ func _punto_dentro(punto: Vector2) -> bool:
 		return abs(local_point.x) <= extents.x and abs(local_point.y) <= extents.y
 	
 	return false
+
+func restore_default_cursor():
+	# Volver al cursor por defecto
+	Input.set_default_cursor_shape(Input.CursorShape.CURSOR_ARROW)

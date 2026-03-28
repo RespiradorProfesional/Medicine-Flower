@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://baxa7blqdy35g"]
+
+[ext_resource type="PackedScene" uid="uid://dobtsoumfofdx" path="res://scenes/movibles/box.tscn" id="1_7vawv"]
+[ext_resource type="Texture2D" uid="uid://2qvjhbk6k3aa" path="res://assets/sprites/palo.png" id="2_bcewa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vawv"]
+size = Vector2(235, 14)
+
+[node name="Node2D" unique_id=924909751 instance=ExtResource("1_7vawv")]
+position = Vector2(1, 0)
+
+[node name="Sprite2D" parent="." index="0" unique_id=1499693980]
+position = Vector2(-2.7604592, -2.000001)
+scale = Vector2(0.4044503, 0.40445027)
+texture = ExtResource("2_bcewa")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=868555179]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_7vawv")

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c58sct61v8smj"]
+
+[ext_resource type="PackedScene" uid="uid://bqgigwepdgero" path="res://scenes/auxiliar/puzzle_base.tscn" id="1_7b06j"]
+[ext_resource type="Script" uid="uid://c2eavw2cl01xq" path="res://scenes/auxiliar/puzzle_2.gd" id="2_4ss32"]
+[ext_resource type="PackedScene" uid="uid://baxa7blqdy35g" path="res://scenes/movibles/madera.tscn" id="2_dbrms"]
+[ext_resource type="PackedScene" uid="uid://inlacxiqbo1j" path="res://scenes/movibles/piedra.tscn" id="3_4ss32"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dbrms"]
+size = Vector2(1084, 382)
+
+[node name="puzzle_2" unique_id=976242000 instance=ExtResource("1_7b06j")]
+script = ExtResource("2_4ss32")
+
+[node name="madera" parent="." index="6" unique_id=924909751 instance=ExtResource("2_dbrms")]
+position = Vector2(358, 221)
+
+[node name="madera2" parent="." index="7" unique_id=117935987 instance=ExtResource("2_dbrms")]
+position = Vector2(-141, 221)
+
+[node name="piedra" parent="." index="8" unique_id=676924750 instance=ExtResource("3_4ss32")]
+position = Vector2(-186, 170)
+mass = 10.0
+
+[node name="piedra2" parent="." index="9" unique_id=703525021 instance=ExtResource("3_4ss32")]
+position = Vector2(511, 181)
+mass = 10.0
+freeze_mode = 1
+
+[node name="Area2D" type="Area2D" parent="." index="10" unique_id=1879428596]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0" unique_id=1563749406]
+position = Vector2(109, 624)
+shape = SubResource("RectangleShape2D_dbrms")
+
+[node name="Marker2D" type="Marker2D" parent="." index="11" unique_id=773948676]
+position = Vector2(463, 71)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

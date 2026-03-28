@@ -4,15 +4,11 @@
 [ext_resource type="Script" uid="uid://dmc3y2n3cf5li" path="res://scenes/movibles/box.gd" id="2_61fs8"]
 [ext_resource type="Texture2D" uid="uid://b4wlpydqi57gi" path="res://icon.svg" id="2_ualuu"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_61fs8"]
-size = Vector2(122, 119)
-
 [node name="Node2D" unique_id=924909751 instance=ExtResource("1_drxe0")]
 script = ExtResource("2_61fs8")
 
-[node name="CollisionShape2D" parent="." index="0" unique_id=868555179]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_61fs8")
-
-[node name="Sprite2D" type="Sprite2D" parent="." index="1" unique_id=1499693980]
+[node name="Sprite2D" type="Sprite2D" parent="." index="0" unique_id=1499693980]
 texture = ExtResource("2_ualuu")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=868555179]
+position = Vector2(0, -0.5)

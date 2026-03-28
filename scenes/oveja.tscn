@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dfqt2pi6qnve2"]
+
+[ext_resource type="PackedScene" uid="uid://drcu4buj78mx5" path="res://scenes/auxiliar/basic_object.tscn" id="1_tgyc4"]
+[ext_resource type="Script" uid="uid://dhyjeyrb1fgdk" path="res://scenes/oveja.gd" id="2_p25uj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p25uj"]
+radius = 25.019993
+
+[node name="Node2D" unique_id=924909751 instance=ExtResource("1_tgyc4")]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("2_p25uj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0" unique_id=589796718]
+scale = Vector2(0.328125, 0.34375)
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=868555179]
+shape = SubResource("CircleShape2D_p25uj")

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dpmmc2qm1tggy"]
+
+[ext_resource type="PackedScene" uid="uid://dfqt2pi6qnve2" path="res://scenes/oveja.tscn" id="1_3sh04"]
+[ext_resource type="Texture2D" uid="uid://d1kl4qqg4fgl4" path="res://assets/sprites/oveja_blanca.png" id="2_noa41"]
+
+[node name="Node2D" unique_id=924909751 instance=ExtResource("1_3sh04")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=589796718]
+position = Vector2(2.3841858e-07, 2.3841858e-07)
+scale = Vector2(0.3737399, 0.39153704)
+texture = ExtResource("2_noa41")

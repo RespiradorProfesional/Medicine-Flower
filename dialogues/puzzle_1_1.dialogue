@@ -1,0 +1,15 @@
+~ start
+do! focus_npc_camera()
+Pastor: [wave]Snif... [speed=0.1] snif...[/wave]
+do! focus_player_camera()
+Flowy: Que sucede?
+do! focus_npc_camera()
+Pastor: Las ovejas se han escapado del establo.
+do! focus_player_camera()
+Flowy: [i]No tengo tiempo para esto...[/i]
+Flowy: Lo siento pastor, mi madre ha contagiado el virus y necesita una cura lo antes posible.
+do! focus_npc_camera()
+Pastor: Hm...
+Pastor: HMMMMMMMMMM.........
+Pastor: Creo que te puedo ayudar con eso... Si pones todas las ovejas en su sitio, te dire como curar a tu madre
+=> END

@@ -16,6 +16,14 @@ script = ExtResource("3_5qkju")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qcxax"]
 size = Vector2(91, 375)
 
+[sub_resource type="Resource" id="Resource_qcxax"]
+script = ExtResource("3_5qkju")
+duration = 0.5
+
+[sub_resource type="Resource" id="Resource_5qkju"]
+script = ExtResource("3_5qkju")
+duration = 0.5
+
 [node name="Node2D" type="Node2D" unique_id=976242000]
 script = ExtResource("1_6lo13")
 
@@ -40,7 +48,7 @@ position = Vector2(694, 120.5)
 shape = SubResource("RectangleShape2D_v14pl")
 
 [node name="PhantomCamera2D" type="Node2D" parent="." unique_id=2025798826]
-position = Vector2(314, 82)
+position = Vector2(125, 82)
 script = ExtResource("2_qcxax")
 tween_resource = SubResource("Resource_2pmnd")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
@@ -51,5 +59,15 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 position = Vector2(-360.5, 76.5)
 shape = SubResource("RectangleShape2D_qcxax")
 
+[node name="npc_camera" type="Node2D" parent="." unique_id=1992170305]
+script = ExtResource("2_qcxax")
+tween_resource = SubResource("Resource_qcxax")
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
+[node name="player_camera" type="Node2D" parent="." unique_id=544268338]
+script = ExtResource("2_qcxax")
+tween_resource = SubResource("Resource_5qkju")
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
 [connection signal="body_entered" from="enter_area" to="." method="_on_enter_area_body_entered"]
-[connection signal="body_exited" from="enter_area" to="." method="_on_enter_area_body_exited"]
+[connection signal="body_entered" from="exit_area" to="." method="_on_exit_area_body_entered"]

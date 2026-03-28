@@ -1,0 +1,8 @@
+~ start
+do! focus_npc_camera()
+Pastor: .....
+Pastor: Creo que mejor no preguntare del por qué puedes hacer volar a [wave]mis ovejas[/wave]
+Pastor: Si sigues todo recto encontraras una especie de ruinas, por alguna razón hay gente monopolizando el antidoto y lo esconden en sitios dificiles de acceder
+Pastor: Pero por alguna razón los tontos dejan apuntes de cual es el antidoto, [wave]ya que ellos mismos se olvidan de cual era[/wave]
+Pastor: No te ayude mucho pero espero que puedas ayudar a tu madre
+=> END

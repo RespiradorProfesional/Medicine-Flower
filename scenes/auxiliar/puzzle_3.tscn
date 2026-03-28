@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c153v30x8nt8p"]
+
+[ext_resource type="PackedScene" uid="uid://bqgigwepdgero" path="res://scenes/auxiliar/puzzle_base.tscn" id="1_4gmvp"]
+[ext_resource type="Script" uid="uid://dhd2f8dcvpvxr" path="res://scenes/auxiliar/puzzle_3.gd" id="2_etad0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_etad0"]
+
+[node name="Node2D" unique_id=976242000 instance=ExtResource("1_4gmvp")]
+script = ExtResource("2_etad0")
+
+[node name="areas" type="Node2D" parent="." index="6" unique_id=1616513392]
+position = Vector2(0, -7)
+
+[node name="Area2D" type="Area2D" parent="areas" index="0" unique_id=831919610]
+position = Vector2(-127, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areas/Area2D" index="0" unique_id=321780669]
+shape = SubResource("RectangleShape2D_etad0")
+
+[node name="Area2D2" type="Area2D" parent="areas" index="1" unique_id=411275119]
+position = Vector2(-1, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areas/Area2D2" index="0" unique_id=39524606]
+shape = SubResource("RectangleShape2D_etad0")
+
+[node name="Area2D3" type="Area2D" parent="areas" index="2" unique_id=204961569]
+position = Vector2(128, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areas/Area2D3" index="0" unique_id=890250639]
+shape = SubResource("RectangleShape2D_etad0")
