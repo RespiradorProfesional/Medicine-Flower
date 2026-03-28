@@ -11,6 +11,9 @@ size = Vector2(1084, 382)
 [node name="puzzle_2" unique_id=976242000 instance=ExtResource("1_7b06j")]
 script = ExtResource("2_4ss32")
 
+[node name="colision_invisible_wall" parent="inivisble_wall" parent_id_path=PackedInt32Array(389941479) index="0" unique_id=1537056044]
+position = Vector2(-354, -237)
+
 [node name="madera" parent="." index="6" unique_id=924909751 instance=ExtResource("2_dbrms")]
 position = Vector2(358, 221)
 
