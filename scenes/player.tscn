@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://cqgxqscqx3fvp" path="res://assets/sprites/pjs/prota/Brazo izq.png" id="7_d2wvv"]
 [ext_resource type="Texture2D" uid="uid://djo3o8ydjnkwg" path="res://assets/sprites/pjs/Pose alternativa.png" id="10_y4r1p"]
 [ext_resource type="AudioStream" uid="uid://dr13fgbbwmdts" path="res://assets/audio/sfx/walk.mp3" id="11_d2wvv"]
+[ext_resource type="AudioStream" uid="uid://b5tceqh0psw7q" path="res://assets/audio/sfx/jump.mp3" id="12_f1ej7"]
+[ext_resource type="AudioStream" uid="uid://f2rieyqcdvmr" path="res://assets/audio/sfx/grab.mp3" id="13_oprun"]
+[ext_resource type="AudioStream" uid="uid://cr3nb6eodq5k1" path="res://assets/audio/sfx/levitation.mp3" id="14_a8ls1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8vuu"]
 radius = 24.0
@@ -1681,5 +1684,17 @@ texture = ExtResource("10_y4r1p")
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=157023246]
 occluder = SubResource("OccluderPolygon2D_y4r1p")
 
-[node name="pasos" type="AudioStreamPlayer2D" parent="." unique_id=157810380]
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="." unique_id=157810380]
 stream = ExtResource("11_d2wvv")
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=983843870]
+stream = ExtResource("12_f1ej7")
+
+[node name="GrabSound" type="AudioStreamPlayer2D" parent="." unique_id=2111331167]
+stream = ExtResource("13_oprun")
+
+[node name="LandingSound" type="AudioStreamPlayer2D" parent="." unique_id=608915669]
+stream = ExtResource("11_d2wvv")
+
+[node name="ChargeSound" type="AudioStreamPlayer2D" parent="." unique_id=775246224]
+stream = ExtResource("14_a8ls1")
