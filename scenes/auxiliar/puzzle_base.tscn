@@ -5,10 +5,10 @@
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_5qkju"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6lo13"]
-size = Vector2(20, 275)
+size = Vector2(23.5, 1940.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v14pl"]
-size = Vector2(21, 261)
+size = Vector2(19.5, 2082.5)
 
 [sub_resource type="Resource" id="Resource_2pmnd"]
 script = ExtResource("3_5qkju")

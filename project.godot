@@ -63,7 +63,7 @@ leftClick={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogues/puzzle_1_1.dialogue", "res://dialogues/puzzle_1_2.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogues/puzzle_1_1.dialogue", "res://dialogues/puzzle_1_2.dialogue", "res://dialogues/nota_1.dialogue", "res://dialogues/nota_2.dialogue", "res://dialogues/nota_3.dialogue", "res://dialogues/flor.dialogue", "res://pocima.dialogue", "res://dialogues/talisman.dialogue")
 
 [physics]
 

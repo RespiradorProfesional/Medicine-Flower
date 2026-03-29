@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://du8cbsig7umn8"]
 
 [ext_resource type="Script" uid="uid://b411qhidyvn2i" path="res://scenes/nota.gd" id="1_np0oh"]
+[ext_resource type="Texture2D" uid="uid://cv7daflavlnpm" path="res://assets/sprites/items/nota.png" id="2_tich3"]
+[ext_resource type="Texture2D" uid="uid://7n82q5o2l3v7" path="res://assets/sprites/items/tecla_e.png" id="3_5x1mq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tich3"]
-radius = 39.0
+radius = 77.02597
 
 [node name="Node2D" type="Node2D" unique_id=307198238]
 script = ExtResource("1_np0oh")
@@ -13,7 +15,15 @@ script = ExtResource("1_np0oh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=614747068]
 shape = SubResource("CircleShape2D_tich3")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=938289665]
+[node name="Nota" type="Sprite2D" parent="." unique_id=1927880520]
+position = Vector2(0, 3)
+texture = ExtResource("2_tich3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1496912680]
+visible = false
+position = Vector2(0, -119)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_5x1mq")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

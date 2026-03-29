@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://d1kl4qqg4fgl4" path="res://assets/sprites/oveja_blanca.png" id="2_noa41"]
 
 [node name="Node2D" unique_id=924909751 instance=ExtResource("1_3sh04")]
+collision_layer = 4
+collision_mask = 4
 
 [node name="Sprite2D" parent="." index="0" unique_id=589796718]
 position = Vector2(2.3841858e-07, 2.3841858e-07)

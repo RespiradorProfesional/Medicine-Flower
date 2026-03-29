@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c4onyq5i527gt"]
+
+[ext_resource type="PackedScene" uid="uid://dq06f6jg07idl" path="res://scenes/seleccion_final_base.tscn" id="1_ut1cb"]
+[ext_resource type="Texture2D" uid="uid://boeup03f1neqk" path="res://assets/sprites/items/flor.png" id="2_lyhhd"]
+
+[node name="Node2D" unique_id=400572248 instance=ExtResource("1_ut1cb")]
+
+[node name="Sprite2D2" parent="." index="3" unique_id=551290271]
+texture = ExtResource("2_lyhhd")

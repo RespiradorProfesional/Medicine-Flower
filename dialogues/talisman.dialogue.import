@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dlekrvqk5gmg0"
+path="res://.godot/imported/talisman.dialogue-4e75426566bada3fcf5a5a42ad187063.tres"
+
+[deps]
+
+source_file="res://dialogues/talisman.dialogue"
+dest_files=["res://.godot/imported/talisman.dialogue-4e75426566bada3fcf5a5a42ad187063.tres"]
+
+[params]
+
+defaults=true

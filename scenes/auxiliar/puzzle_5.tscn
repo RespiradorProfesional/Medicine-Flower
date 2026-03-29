@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b3uxx7tnhe1kt"]
+[gd_scene format=3 uid="uid://j4324uww8u5e"]
 
 [ext_resource type="PackedScene" uid="uid://bqgigwepdgero" path="res://scenes/auxiliar/puzzle_base.tscn" id="1_chstm"]
 [ext_resource type="PackedScene" uid="uid://inlacxiqbo1j" path="res://scenes/movibles/piedra.tscn" id="2_esacq"]
@@ -7,10 +7,10 @@
 [node name="Node2D" unique_id=976242000 instance=ExtResource("1_chstm")]
 
 [node name="CollisionShape2D" parent="enter_area" parent_id_path=PackedInt32Array(1968024307) index="0" unique_id=1538181576]
-position = Vector2(-498.5, 259)
+position = Vector2(-283.75, -993.75)
 
 [node name="CollisionShape2D" parent="exit_area" parent_id_path=PackedInt32Array(333908131) index="0" unique_id=629791033]
-position = Vector2(-643, 252)
+position = Vector2(-389.25, -1070.75)
 
 [node name="inivisble_wall" parent="." index="3" unique_id=389941479]
 position = Vector2(-17, 454)

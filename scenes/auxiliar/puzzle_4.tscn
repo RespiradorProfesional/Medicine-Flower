@@ -1,17 +1,19 @@
 [gd_scene format=3 uid="uid://cm2c8qqgkpo6d"]
 
 [ext_resource type="PackedScene" uid="uid://bqgigwepdgero" path="res://scenes/auxiliar/puzzle_base.tscn" id="1_sphsn"]
+[ext_resource type="Texture2D" uid="uid://days4grcwdgg1" path="res://assets/sprites/items/metal.png" id="2_f7vdf"]
 [ext_resource type="PackedScene" uid="uid://baxa7blqdy35g" path="res://scenes/movibles/madera.tscn" id="2_iw712"]
 [ext_resource type="PackedScene" uid="uid://clxeaxe1ll553" path="res://scenes/movibles/caja.tscn" id="3_jqudk"]
+[ext_resource type="Texture2D" uid="uid://dmk32r0v0fl7i" path="res://assets/sprites/items/caja_posicion.png" id="5_y1wvc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sphsn"]
 size = Vector2(70, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jqudk"]
-size = Vector2(55, 45)
+size = Vector2(32, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7vdf"]
-size = Vector2(49, 40)
+size = Vector2(34, 33)
 
 [node name="Node2D" unique_id=976242000 instance=ExtResource("1_sphsn")]
 
@@ -19,20 +21,40 @@ size = Vector2(49, 40)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="boxes" index="0" unique_id=186003119]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="boxes/StaticBody2D" index="0" unique_id=1326209050]
+[node name="Sprite2D" type="Sprite2D" parent="boxes/StaticBody2D" index="0" unique_id=1945910615]
+position = Vector2(-131.32259, -20.125)
+scale = Vector2(0.4910865, 0.26612902)
+texture = ExtResource("2_f7vdf")
+
+[node name="Sprite2D2" type="Sprite2D" parent="boxes/StaticBody2D" index="1" unique_id=2143661601]
+position = Vector2(-131.32259, -44)
+scale = Vector2(0.4910865, 0.26612902)
+texture = ExtResource("2_f7vdf")
+
+[node name="Sprite2D3" type="Sprite2D" parent="boxes/StaticBody2D" index="2" unique_id=827786583]
+position = Vector2(126.32257, -20.125)
+scale = Vector2(0.4910865, 0.26612902)
+texture = ExtResource("2_f7vdf")
+
+[node name="Sprite2D4" type="Sprite2D" parent="boxes/StaticBody2D" index="3" unique_id=2001991954]
+position = Vector2(126.32257, -44)
+scale = Vector2(0.4910865, 0.26612902)
+texture = ExtResource("2_f7vdf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boxes/StaticBody2D" index="4" unique_id=1326209050]
 position = Vector2(-131, -20)
 shape = SubResource("RectangleShape2D_sphsn")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="boxes/StaticBody2D" index="1" unique_id=807846917]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="boxes/StaticBody2D" index="5" unique_id=807846917]
 position = Vector2(-132, -43)
 shape = SubResource("RectangleShape2D_sphsn")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="boxes/StaticBody2D" index="2" unique_id=978420329]
-position = Vector2(126, -16)
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="boxes/StaticBody2D" index="6" unique_id=2076776379]
+position = Vector2(127, -20)
 shape = SubResource("RectangleShape2D_sphsn")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="boxes/StaticBody2D" index="3" unique_id=140118840]
-position = Vector2(125, -39)
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="boxes/StaticBody2D" index="7" unique_id=590910263]
+position = Vector2(126, -43)
 shape = SubResource("RectangleShape2D_sphsn")
 
 [node name="madera" parent="boxes" index="1" unique_id=924909751 instance=ExtResource("2_iw712")]
@@ -48,12 +70,27 @@ position = Vector2(67, 205)
 position = Vector2(-40, -66)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0" unique_id=1557936384]
-position = Vector2(0.5, -1.5)
+position = Vector2(3, -4)
 shape = SubResource("RectangleShape2D_jqudk")
 
 [node name="Area2D2" type="Area2D" parent="." index="8" unique_id=1060446303]
-position = Vector2(64, -65)
+position = Vector2(53, -65)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" index="0" unique_id=354848785]
-position = Vector2(-1.5, -2)
+position = Vector2(-4, -4.5)
 shape = SubResource("RectangleShape2D_f7vdf")
+
+[node name="CajaPosicion" type="Sprite2D" parent="." index="9" unique_id=2063389117]
+position = Vector2(-40.8, -68.875)
+scale = Vector2(0.54473686, 0.5447368)
+texture = ExtResource("5_y1wvc")
+
+[node name="CajaPosicion2" type="Sprite2D" parent="." index="10" unique_id=373482929]
+position = Vector2(48, -68.875)
+scale = Vector2(0.54473686, 0.5447368)
+texture = ExtResource("5_y1wvc")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="body_exited" from="Area2D2" to="." method="_on_area_2d_2_body_exited"]

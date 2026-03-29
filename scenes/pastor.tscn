@@ -1,0 +1,333 @@
+[gd_scene format=3 uid="uid://bvxdhjvsna18k"]
+
+[ext_resource type="Script" uid="uid://d34gyd2yvt5mu" path="res://scenes/pastor.gd" id="1_g52qt"]
+[ext_resource type="Texture2D" uid="uid://bya6hiw0p66se" path="res://assets/sprites/pjs/pastor/Bastón.png" id="1_gntwj"]
+[ext_resource type="Texture2D" uid="uid://w7l00ytujitm" path="res://assets/sprites/pjs/pastor/Brazo der npc.png" id="2_g52qt"]
+[ext_resource type="Texture2D" uid="uid://s3t2ffaok22k" path="res://assets/sprites/pjs/pastor/Brazo izq npc.png" id="3_u2yu5"]
+[ext_resource type="Texture2D" uid="uid://dpdfxxcx0qnl7" path="res://assets/sprites/pjs/pastor/Cabeza npc.png" id="4_7lhp4"]
+[ext_resource type="Texture2D" uid="uid://bty64p67c0yxg" path="res://assets/sprites/pjs/pastor/Capa npc.png" id="5_lg1pw"]
+[ext_resource type="Texture2D" uid="uid://do3a2yvj0gtwy" path="res://assets/sprites/pjs/pastor/Pierna der npc.png" id="6_vbtg2"]
+[ext_resource type="Texture2D" uid="uid://bnqbbltwlgkjc" path="res://assets/sprites/pjs/pastor/Pierna izq npc.png" id="7_7suco"]
+[ext_resource type="Texture2D" uid="uid://dm4a11k8pcvn7" path="res://assets/sprites/pjs/pastor/Torso npc.png" id="8_pcmlk"]
+
+[sub_resource type="Animation" id="Animation_gntwj"]
+resource_name = "Idle"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/CabezaNpc:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1, 5), Vector2(11.000002, 7)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/CabezaNpc:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.08417432]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/BrazoDerNpc:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.48891574]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D/BrazoDerNpc:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(58.999985, 380.99997)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2D/BrazoIzqNpc:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.24948692, -0.52495205]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2D/BrazoIzqNpc:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-103.000015, 375), Vector2(-81, 400)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2D/TorsoNpc:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2D/TorsoNpc:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-37, 375)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2D/TorsoNpc:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2D/Bastón:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.1166613]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2D/Bastón:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(385.99997, 400)]
+}
+
+[sub_resource type="Animation" id="Animation_g52qt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/CabezaNpc:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, 5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/CabezaNpc:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/BrazoDerNpc:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.48891574]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D/BrazoDerNpc:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(58.999985, 380.99997)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2D/BrazoIzqNpc:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.24948692]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2D/BrazoIzqNpc:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-103.000015, 375)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2D/TorsoNpc:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2D/TorsoNpc:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-37, 375)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2D/TorsoNpc:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2D/Bastón:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.1166613]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2D/Bastón:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(385.99997, 400)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g52qt"]
+_data = {
+&"Idle": SubResource("Animation_gntwj"),
+&"RESET": SubResource("Animation_g52qt")
+}
+
+[node name="Node2D" type="Node2D" unique_id=98939762]
+script = ExtResource("1_g52qt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1264938640]
+libraries/ = SubResource("AnimationLibrary_g52qt")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1979668334]
+scale = Vector2(0.12, 0.12)
+
+[node name="CapaNpc" type="Sprite2D" parent="Node2D" unique_id=1242478239]
+position = Vector2(-54, 338)
+texture = ExtResource("5_lg1pw")
+
+[node name="BrazoDerNpc" type="Sprite2D" parent="Node2D" unique_id=1541914398]
+position = Vector2(58.999985, 380.99997)
+rotation = 0.48891574
+texture = ExtResource("2_g52qt")
+
+[node name="Bastón" type="Sprite2D" parent="Node2D" unique_id=741015045]
+position = Vector2(385.99997, 400)
+rotation = 1.1166613
+scale = Vector2(0.84647906, 0.8126588)
+texture = ExtResource("1_gntwj")
+
+[node name="PiernaDerNpc" type="Sprite2D" parent="Node2D" unique_id=1681451222]
+position = Vector2(47, 503)
+texture = ExtResource("6_vbtg2")
+
+[node name="PiernaIzqNpc" type="Sprite2D" parent="Node2D" unique_id=2047282293]
+position = Vector2(-64, 502)
+texture = ExtResource("7_7suco")
+
+[node name="TorsoNpc" type="Sprite2D" parent="Node2D" unique_id=1196688788]
+position = Vector2(-37, 375)
+texture = ExtResource("8_pcmlk")
+
+[node name="BrazoIzqNpc" type="Sprite2D" parent="Node2D" unique_id=1088207634]
+position = Vector2(-103.000015, 375)
+rotation = -0.24948692
+texture = ExtResource("3_u2yu5")
+
+[node name="CabezaNpc" type="Sprite2D" parent="Node2D" unique_id=876959429]
+position = Vector2(-1, 5)
+texture = ExtResource("4_7lhp4")

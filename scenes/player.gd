@@ -14,12 +14,15 @@ var mose_to_hold = preload("res://assets/sprites/mouse/to_hold.png")
 var mose_hold = preload("res://assets/sprites/mouse/hold.png")
 var objeto_agarrado: ObjetoAgarrar = null
 
+@onready var pose_alernativa: Sprite2D = $sprites/pose_alernativa
+
 # Referencia al nodo de sprites
 @onready var sprites: Node2D = $sprites
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 # Guardar la escala original
 var original_scale: Vector2
+@onready var pasos: AudioStreamPlayer2D = $pasos
 
 func _ready():
 	# Guardar la escala original del nodo sprites
@@ -84,8 +87,7 @@ func _physics_process(delta):
 	else:
 		velocity.x = 0
 		# Si está agarrando, mantener la animación idle con la última dirección
-		if animation_player and animation_player.current_animation != "idle":
-			animation_player.play("idle")
+		animation_player.play("carga")
 
 	# Mover el personaje
 	move_and_slide()

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bixb4tp1n0twa"]
+
+[ext_resource type="PackedScene" uid="uid://dq06f6jg07idl" path="res://scenes/seleccion_final_base.tscn" id="1_ciwpv"]
+[ext_resource type="Texture2D" uid="uid://bnl53vt8y7fee" path="res://assets/sprites/items/talisman.png" id="2_8ttys"]
+
+[node name="Node2D" unique_id=400572248 instance=ExtResource("1_ciwpv")]
+
+[node name="Sprite2D2" parent="." index="3" unique_id=551290271]
+texture = ExtResource("2_8ttys")

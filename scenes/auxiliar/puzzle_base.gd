@@ -44,3 +44,28 @@ func focus_player_camera() -> void:
 func focus_npc_camera() -> void:
 	player_camera.priority=0
 	npc_camera.priority=20
+
+
+var area_1_complete=false
+var area_2_complete=false
+
+func _on_area_2d_2_body_entered(body: Node2D) -> void:
+	area_2_complete=true
+	if area_1_complete and area_2_complete:
+		finished_puzzle()
+
+func _on_area_2d_2_body_exited(body: Node2D) -> void:
+	area_2_complete=false
+	if !area_1_complete or !area_2_complete:
+		colision_invisible_wall.set_deferred("disabled", false)
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	area_1_complete=true
+	if area_1_complete and area_2_complete:
+		finished_puzzle()
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	area_1_complete=false
+	if !area_1_complete or !area_2_complete:
+		colision_invisible_wall.set_deferred("disabled", false)

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dsmuy5tntjr1d"
+path="res://.godot/imported/pocima.dialogue-2e94fd119998c1c8a78ba6891b10813c.tres"
+
+[deps]
+
+source_file="res://pocima.dialogue"
+dest_files=["res://.godot/imported/pocima.dialogue-2e94fd119998c1c8a78ba6891b10813c.tres"]
+
+[params]
+
+defaults=true

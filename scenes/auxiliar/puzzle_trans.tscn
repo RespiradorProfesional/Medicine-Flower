@@ -4,5 +4,11 @@
 
 [node name="Node2D" unique_id=976242000 instance=ExtResource("1_7b06j")]
 
+[node name="PhantomCamera2D" parent="." index="2" unique_id=2025798826]
+zoom = Vector2(0.7, 0.7)
+
 [node name="inivisble_wall" parent="." index="3" unique_id=389941479]
 position = Vector2(37, -262)
+
+[node name="colision_invisible_wall" parent="inivisble_wall" index="0" unique_id=1537056044]
+position = Vector2(-557, -112)

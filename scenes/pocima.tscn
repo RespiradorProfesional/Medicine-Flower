@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bo478lsvvrw14"]
+
+[ext_resource type="PackedScene" uid="uid://dq06f6jg07idl" path="res://scenes/seleccion_final_base.tscn" id="1_jdlig"]
+[ext_resource type="Texture2D" uid="uid://580ifjrqgbln" path="res://assets/sprites/items/pocima.png" id="2_gvhps"]
+
+[node name="Node2D" unique_id=400572248 instance=ExtResource("1_jdlig")]
+
+[node name="Sprite2D2" parent="." index="3" unique_id=551290271]
+texture = ExtResource("2_gvhps")

@@ -22,11 +22,9 @@ position = Vector2(-141, 221)
 
 [node name="piedra" parent="." index="8" unique_id=676924750 instance=ExtResource("3_4ss32")]
 position = Vector2(-186, 170)
-mass = 10.0
 
 [node name="piedra2" parent="." index="9" unique_id=703525021 instance=ExtResource("3_4ss32")]
 position = Vector2(511, 181)
-mass = 10.0
 freeze_mode = 1
 
 [node name="Area2D" type="Area2D" parent="." index="10" unique_id=1879428596]
