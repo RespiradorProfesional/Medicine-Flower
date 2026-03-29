@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Medice Flower"
-run/main_scene="uid://bwbvr4uxigwgd"
+run/main_scene="uid://cj6wgy61xuelf"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
