@@ -3,11 +3,13 @@ extends Node2D
 
 var can_interact= false
 @export var dialogue_resource : DialogueResource
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact") and can_interact:
+		audio_stream_player_2d.play()
 		DialogueManager.show_dialogue_balloon(dialogue_resource,"",[self])
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://baxa7blqdy35g" path="res://scenes/movibles/madera.tscn" id="2_iw712"]
 [ext_resource type="PackedScene" uid="uid://clxeaxe1ll553" path="res://scenes/movibles/caja.tscn" id="3_jqudk"]
 [ext_resource type="Texture2D" uid="uid://dmk32r0v0fl7i" path="res://assets/sprites/items/caja_posicion.png" id="5_y1wvc"]
+[ext_resource type="Texture2D" uid="uid://btis4dugr0gyg" path="res://assets/sprites/items/pared.png" id="6_yqlj5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sphsn"]
 size = Vector2(70, 6)
@@ -89,6 +90,11 @@ texture = ExtResource("5_y1wvc")
 position = Vector2(48, -68.875)
 scale = Vector2(0.54473686, 0.5447368)
 texture = ExtResource("5_y1wvc")
+
+[node name="Pared" type="Sprite2D" parent="." index="11" unique_id=1270113358]
+position = Vector2(-416, 83.00001)
+scale = Vector2(0.64332455, 0.64332455)
+texture = ExtResource("6_yqlj5")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

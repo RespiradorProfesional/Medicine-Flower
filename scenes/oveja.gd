@@ -4,6 +4,7 @@ class_name OvejaSimple
 @export var velocidad_maxima: float = 300.0
 @export var fuerza_movimiento: float = 500.0
 @export var intervalo_cambio: float = 2.0
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var moviendo_derecha: bool = true
 var tiempo_cambio: float = 0.0
@@ -29,3 +30,6 @@ func _physics_process(delta: float) -> void:
 		var direccion = 1 if moviendo_derecha else -1
 		if abs(linear_velocity.x) < velocidad_maxima:
 			apply_central_force(Vector2(direccion * fuerza_movimiento, 0))
+
+func agarrado_func():
+	audio_stream_player_2d.play()

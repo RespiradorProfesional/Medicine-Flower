@@ -18,11 +18,11 @@ size = Vector2(91, 375)
 
 [sub_resource type="Resource" id="Resource_qcxax"]
 script = ExtResource("3_5qkju")
-duration = 0.5
+duration = 0.0
 
 [sub_resource type="Resource" id="Resource_5qkju"]
 script = ExtResource("3_5qkju")
-duration = 0.5
+duration = 0.0
 
 [node name="Node2D" type="Node2D" unique_id=976242000]
 script = ExtResource("1_6lo13")
@@ -65,7 +65,9 @@ tween_resource = SubResource("Resource_qcxax")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="player_camera" type="Node2D" parent="." unique_id=544268338]
+top_level = true
 script = ExtResource("2_qcxax")
+follow_mode = 2
 tween_resource = SubResource("Resource_5qkju")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 

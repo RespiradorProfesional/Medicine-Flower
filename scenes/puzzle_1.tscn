@@ -21,8 +21,14 @@ ovejas_total = 3
 dialogue_resource = null
 dialogue_resource_2 = null
 
+[node name="CollisionShape2D2" parent="enter_area" parent_id_path=PackedInt32Array(1968024307) index="1" unique_id=1238948138]
+position = Vector2(74, 127)
+
 [node name="CollisionShape2D" parent="exit_area" parent_id_path=PackedInt32Array(333908131) index="0" unique_id=629791033]
 position = Vector2(-481, 140)
+
+[node name="CollisionShape2D2" parent="exit_area" parent_id_path=PackedInt32Array(333908131) index="1" unique_id=359658936]
+position = Vector2(497, 120.5)
 
 [node name="colision_invisible_wall" parent="inivisble_wall" parent_id_path=PackedInt32Array(389941479) index="0" unique_id=1537056044]
 position = Vector2(-589, -600)
@@ -60,7 +66,7 @@ position = Vector2(-244, 211)
 zoom = Vector2(2, 2)
 
 [node name="player_camera" parent="." index="7" unique_id=544268338]
-position = Vector2(554, 210)
+position = Vector2(30, 210)
 zoom = Vector2(2, 2)
 
 [node name="Node2D" parent="." index="8" unique_id=924909751 instance=ExtResource("3_pje61")]

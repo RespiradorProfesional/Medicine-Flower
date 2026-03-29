@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://drcu4buj78mx5" path="res://scenes/auxiliar/basic_object.tscn" id="1_tgyc4"]
 [ext_resource type="Script" uid="uid://dhyjeyrb1fgdk" path="res://scenes/oveja.gd" id="2_p25uj"]
+[ext_resource type="AudioStream" uid="uid://cmp2lq1q2m5be" path="res://assets/audio/sfx/oveja.mp3" id="3_fc5n5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p25uj"]
 radius = 25.019993
@@ -16,3 +17,6 @@ scale = Vector2(0.328125, 0.34375)
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=868555179]
 shape = SubResource("CircleShape2D_p25uj")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="2" unique_id=914159760]
+stream = ExtResource("3_fc5n5")

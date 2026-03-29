@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://cj6wgy61xuelf"]
+
+[ext_resource type="Texture2D" uid="uid://b4f28ek3s8ho1" path="res://assets/ui/ui.jpg" id="1_5p55f"]
+[ext_resource type="Script" uid="uid://dnveehi5361sl" path="res://scenes/control.gd" id="1_r67kn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5p55f"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r67kn"]
+bg_color = Color(0.98234254, 0.9823423, 0.9823424, 0)
+draw_center = false
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[node name="Control" type="Control" unique_id=220581540]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r67kn")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=709679933]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5p55f")
+expand_mode = 2
+
+[node name="Button" type="Button" parent="." unique_id=1726302017]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 283.0
+offset_right = 682.0
+offset_bottom = 393.0
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_5p55f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_r67kn")
+text = "	Jugar"
+
+[node name="Button2" type="Button" parent="." unique_id=507674538]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 420.0
+offset_right = 682.0
+offset_bottom = 530.0
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_5p55f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_r67kn")
+text = "Salir"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -33,6 +33,10 @@ func _intentar_agarrar() -> void:
 		
 		# Reducir fricción para movimiento más suave
 		linear_damp = 0.5
+		agarrado_func()
+
+func agarrado_func():
+	pass
 
 func _soltar() -> void:
 	agarrado = false

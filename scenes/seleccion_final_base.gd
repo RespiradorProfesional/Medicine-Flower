@@ -11,7 +11,7 @@ func _ready() -> void:
 	DialogueManager.dialogue_ended.connect(_on_dialogue_finished)
 
 func _on_dialogue_finished(dialogue)->void:
-	print(dialogue)
+	get_tree().change_scene_to_file("res://scenes/control.tscn")
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact") and can_interact:

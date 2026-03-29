@@ -14,6 +14,8 @@
 [ext_resource type="AudioStream" uid="uid://b5tceqh0psw7q" path="res://assets/audio/sfx/jump.mp3" id="12_f1ej7"]
 [ext_resource type="AudioStream" uid="uid://f2rieyqcdvmr" path="res://assets/audio/sfx/grab.mp3" id="13_oprun"]
 [ext_resource type="AudioStream" uid="uid://cr3nb6eodq5k1" path="res://assets/audio/sfx/levitation.mp3" id="14_a8ls1"]
+[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="15_a8ls1"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="16_qfm1y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8vuu"]
 radius = 24.0
@@ -1632,6 +1634,9 @@ _data = {
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_y4r1p"]
 polygon = PackedVector2Array(29, -33, 35, -10, 34, 16, 32, 45, 23, 73, -11, 73, -29, 49, -34, 14, -30, -17, -20, -31, 0, -39)
 
+[sub_resource type="Resource" id="Resource_a8ls1"]
+script = ExtResource("16_qfm1y")
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=792607053]
 script = ExtResource("1_3vyb7")
 
@@ -1689,6 +1694,7 @@ stream = ExtResource("11_d2wvv")
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=983843870]
 stream = ExtResource("12_f1ej7")
+volume_db = -5.832
 
 [node name="GrabSound" type="AudioStreamPlayer2D" parent="." unique_id=2111331167]
 stream = ExtResource("13_oprun")
@@ -1698,3 +1704,11 @@ stream = ExtResource("11_d2wvv")
 
 [node name="ChargeSound" type="AudioStreamPlayer2D" parent="." unique_id=775246224]
 stream = ExtResource("14_a8ls1")
+
+[node name="PhantomCamera2D" type="Node2D" parent="." unique_id=793754552 node_paths=PackedStringArray("follow_targets")]
+top_level = true
+script = ExtResource("15_a8ls1")
+follow_mode = 3
+follow_targets = [null, null]
+tween_resource = SubResource("Resource_a8ls1")
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"

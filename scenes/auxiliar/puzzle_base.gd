@@ -26,6 +26,7 @@ func _on_enter_area_body_entered(body: Node2D) -> void:
 		phantom_camera_2d.priority=15
 		firts_entry_action()
 		firts_entry=true
+		player_camera.follow_target=body
 
 func firts_entry_action():
 	pass
@@ -53,19 +54,23 @@ func _on_area_2d_2_body_entered(body: Node2D) -> void:
 	area_2_complete=true
 	if area_1_complete and area_2_complete:
 		finished_puzzle()
+		$Pared.visible=false
 
 func _on_area_2d_2_body_exited(body: Node2D) -> void:
 	area_2_complete=false
 	if !area_1_complete or !area_2_complete:
 		colision_invisible_wall.set_deferred("disabled", false)
+		$Pared.visible=true
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	area_1_complete=true
 	if area_1_complete and area_2_complete:
 		finished_puzzle()
+		$Pared.visible=false
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	area_1_complete=false
 	if !area_1_complete or !area_2_complete:
 		colision_invisible_wall.set_deferred("disabled", false)
+		$Pared.visible=true

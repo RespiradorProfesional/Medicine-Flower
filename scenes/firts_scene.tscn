@@ -36,6 +36,8 @@
 [ext_resource type="Texture2D" uid="uid://ciaqrmcl1sd4h" path="res://assets/sprites/texturas/iluminacion.jpg" id="34_aopm4"]
 [ext_resource type="Texture2D" uid="uid://whf7ryoeegm8" path="res://assets/sprites/texturas/iluminacion_borde.jpg" id="35_eklbj"]
 [ext_resource type="Texture2D" uid="uid://blpwy4oj27bns" path="res://assets/sprites/texturas/light.png" id="36_geu3b"]
+[ext_resource type="AudioStream" uid="uid://bfaefi5c47uvo" path="res://assets/music.mp3" id="37_rldfh"]
+[ext_resource type="Script" uid="uid://cdf5gl7gpx7ab" path="res://scenes/audio_stream_player.gd" id="38_rhhoq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kkn4r"]
 texture = ExtResource("12_kkn4r")
@@ -248,11 +250,11 @@ position = Vector2(-9044, -179)
 dialogue_resource = ExtResource("13_d3lap")
 
 [node name="CharacterBody2D" parent="." unique_id=792607053 instance=ExtResource("1_lpnqw")]
-position = Vector2(-4618, 126)
+position = Vector2(546, 189)
 
 [node name="PhantomCamera2D" type="Node2D" parent="." unique_id=1178843736 node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(-4618, 126)
+position = Vector2(546, 189)
 script = ExtResource("3_okyw3")
 priority = 10
 follow_mode = 2
@@ -263,7 +265,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2000575284]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(-4618, 126)
+position = Vector2(546, 189)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D" unique_id=1369338447]
 process_priority = 300
@@ -471,3 +473,41 @@ shadow_enabled = true
 shadow_filter = 2
 shadow_filter_smooth = 22.8
 texture = ExtResource("36_geu3b")
+
+[node name="PointLight2D17" type="PointLight2D" parent="lucews" unique_id=734714292]
+position = Vector2(-9529, -177)
+scale = Vector2(0.34277582, 0.34277582)
+color = Color(0.90517575, 0.78042346, 0.10189807, 1)
+energy = 1.45
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 22.8
+texture = ExtResource("36_geu3b")
+
+[node name="PointLight2D18" type="PointLight2D" parent="lucews" unique_id=593978675]
+position = Vector2(-9299, -177)
+scale = Vector2(0.34277582, 0.34277582)
+color = Color(0.90517575, 0.78042346, 0.10189807, 1)
+energy = 1.45
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 22.8
+texture = ExtResource("36_geu3b")
+
+[node name="PointLight2D19" type="PointLight2D" parent="lucews" unique_id=759900446]
+position = Vector2(-9043, -177)
+scale = Vector2(0.34277582, 0.34277582)
+color = Color(0.90517575, 0.78042346, 0.10189807, 1)
+energy = 1.45
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 22.8
+texture = ExtResource("36_geu3b")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1125863547]
+stream = ExtResource("37_rldfh")
+volume_db = -21.895
+autoplay = true
+script = ExtResource("38_rhhoq")
+
+[connection signal="finished" from="AudioStreamPlayer" to="AudioStreamPlayer" method="_on_finished"]
