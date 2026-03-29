@@ -7,7 +7,7 @@ do! focus_npc_camera()
 Pastor: Las ovejas se han escapado del establo.
 do! focus_player_camera()
 Flowy: [i]No tengo tiempo para esto...[/i]
-Flowy: Lo siento pastor, mi madre ha contagiado el virus y necesita una cura lo antes posible.
+Flowy: Lo siento pastor, mi madre se ha contagiado el virus y necesita una cura lo antes posible.
 do! focus_npc_camera()
 Pastor: Hm...
 Pastor: HMMMMMMMMMM.........

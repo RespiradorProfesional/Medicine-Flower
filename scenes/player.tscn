@@ -1698,12 +1698,14 @@ volume_db = -5.832
 
 [node name="GrabSound" type="AudioStreamPlayer2D" parent="." unique_id=2111331167]
 stream = ExtResource("13_oprun")
+volume_db = -9.701
 
 [node name="LandingSound" type="AudioStreamPlayer2D" parent="." unique_id=608915669]
 stream = ExtResource("11_d2wvv")
 
 [node name="ChargeSound" type="AudioStreamPlayer2D" parent="." unique_id=775246224]
 stream = ExtResource("14_a8ls1")
+volume_db = 18.627
 
 [node name="PhantomCamera2D" type="Node2D" parent="." unique_id=793754552 node_paths=PackedStringArray("follow_targets")]
 top_level = true

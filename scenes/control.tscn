@@ -33,10 +33,10 @@ expand_mode = 2
 
 [node name="Button" type="Button" parent="." unique_id=1726302017]
 layout_mode = 0
-offset_left = 482.0
+offset_left = 454.0
 offset_top = 283.0
-offset_right = 682.0
-offset_bottom = 393.0
+offset_right = 702.0
+offset_bottom = 419.40002
 theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxFlat_5p55f")
 theme_override_styles/hover = SubResource("StyleBoxFlat_r67kn")
@@ -44,10 +44,32 @@ text = "	Jugar"
 
 [node name="Button2" type="Button" parent="." unique_id=507674538]
 layout_mode = 0
-offset_left = 482.0
+offset_left = 454.0
 offset_top = 420.0
-offset_right = 682.0
-offset_bottom = 530.0
+offset_right = 690.0
+offset_bottom = 549.8
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_5p55f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_r67kn")
+text = "Salir"
+
+[node name="Button3" type="Button" parent="." unique_id=177064266]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 283.0
+offset_right = 702.0
+offset_bottom = 419.40002
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_5p55f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_r67kn")
+text = "	Jugar"
+
+[node name="Button4" type="Button" parent="." unique_id=895716495]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 420.0
+offset_right = 690.0
+offset_bottom = 549.8
 theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxFlat_5p55f")
 theme_override_styles/hover = SubResource("StyleBoxFlat_r67kn")
@@ -55,3 +77,5 @@ text = "Salir"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_2_pressed"]
